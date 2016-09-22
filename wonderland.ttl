@@ -1,1 +1,5 @@
+prefix : <http://schema.org>
+base <http://bibliotek.se/>
 
+</bok/alice-i-underlandet> a :Book;
+	:name "Alice i underlandet"@sv .
