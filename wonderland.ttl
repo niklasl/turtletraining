@@ -1,4 +1,5 @@
 base <http://bibliotek.se/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix bf: <http://id.loc.gov/ontologies/bibframe/>
 prefix lcrel: <http://id.loc.gov/vocabulary/relators/>
 prefix lclang: <http://id.loc.gov/vocabulary/languages/>
@@ -7,10 +8,10 @@ prefix kbmarc: <http://id.kb.se/marc/>
 #----
 </work/alice-i-underlandet> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
-    		bf:mainTitle "Alice i underlandet"
+    		bf:mainTitle "Alice i underlandet" #@sv
 	  	] ;
-    bf:contribution [ a bf:Contribution ;
-    		bf:agent </person/åke-runnqvist> ;
+    bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
+    		bf:agent </person/åke-runnquist> ;
 		    bf:role lcrel:trl ;
    		], [ a bf:Contribution ;
     		bf:agent </person/tove-jansson> ;
@@ -22,7 +23,7 @@ prefix kbmarc: <http://id.kb.se/marc/>
 #----
 </work/alices-adventures-in-wonderland> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
-    		bf:mainTitle "Alice's Adventures In Wonderland"
+    		bf:mainTitle "Alice's Adventures In Wonderland" #@en
 	  	] ;
     bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
     		bf:agent </person/lewis-carroll> ;
@@ -31,10 +32,13 @@ prefix kbmarc: <http://id.kb.se/marc/>
     bf:language lclang:eng .
 
 #----
-</person/åke-runnqvist> a bf:Person .
+</person/åke-runnquist> a bf:Person ;
+	rdfs:label "Åke Runnquist" .
 
 #----
-</person/tove-jansson> a bf:Person .
+</person/tove-jansson> a bf:Person ;
+    rdfs:label "Tove Jansson" .
 
 #----
-</person/lewis-carroll> a bf:Person .
+</person/lewis-carroll> a bf:Person ;
+    rdfs:label "Lewis Carroll" .
