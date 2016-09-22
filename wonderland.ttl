@@ -5,7 +5,7 @@ prefix lcrel: <http://id.loc.gov/vocabulary/relators/>
 prefix lclang: <http://id.loc.gov/vocabulary/languages/>
 prefix kbmarc: <http://id.kb.se/marc/>
 
-#----
+
 </work/alice-i-underlandet> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
     		bf:mainTitle "Alice i underlandet" #@sv
@@ -20,7 +20,7 @@ prefix kbmarc: <http://id.kb.se/marc/>
     bf:language lclang:swe ;
     bf:translationOf </work/alices-adventures-in-wonderland> .
 
-#----
+
 </work/alice-i-underlandet-illustrerad> a bf:Text ;
     bf:expressionOf </work/alice-i-underlandet>;
     bf:contribution [ a bf:Contribution ;
@@ -29,18 +29,18 @@ prefix kbmarc: <http://id.kb.se/marc/>
    		];
     bf:hasPart </work/alice-i-underlandet-omslag> .
 
-#----
+
 </instance/alice-i-underlandet> a bf:Print ;
     bf:instanceOf </work/alice-i-underlandet-illustrerad> .
 
-#----
+
 </work/alice-i-underlandet-omslag> a bf:StillImage ;
     bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
     		bf:agent </person/tove-jansson> ;
 		    bf:role lcrel:cre
    		] .
 
-#----
+
 </work/alices-adventures-in-wonderland> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
     		bf:mainTitle "Alice's Adventures In Wonderland" #@en
@@ -51,14 +51,14 @@ prefix kbmarc: <http://id.kb.se/marc/>
    		] ;
     bf:language lclang:eng .
 
-#----
+
 </person/åke-runnquist> a bf:Person ;
 	rdfs:label "Åke Runnquist" .
 
-#----
+
 </person/tove-jansson> a bf:Person ;
     rdfs:label "Tove Jansson" .
 
-#----
+
 </person/lewis-carroll> a bf:Person ;
     rdfs:label "Lewis Carroll" .
