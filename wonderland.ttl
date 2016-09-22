@@ -1,5 +1,4 @@
-prefix : <http://schema.org>
 base <http://bibliotek.se/>
+prefix bf: <http://id.loc.gov/ontologies/bibframe/>
 
-</bok/alice-i-underlandet> a :Book;
-	:name "Alice i underlandet"@sv .
+</bok/alice-i-underlandet> a bf:Work .
