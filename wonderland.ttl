@@ -1,6 +1,5 @@
 base <http://bibliotek.se/>
 prefix bf: <http://id.loc.gov/ontologies/bibframe/>
-prefix dct: <http://purl.org/dc/terms/>
 
 </work/alice-i-underlandet> a bf:Work ;
     bf:title [ a bf:WorkTitle ;
