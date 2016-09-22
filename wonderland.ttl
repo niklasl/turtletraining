@@ -9,9 +9,9 @@ prefix kbmarc: <http://id.kb.se/marc/>
     bf:title [ a bf:WorkTitle ;
     		bf:mainTitle "Alice i underlandet"
 	  	] ;
-    bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
+    bf:contribution [ a bf:Contribution ;
     		bf:agent </person/åke-runnqvist> ;
-		    bf:role lcrel:trl, lcrel:ill ;
+		    bf:role lcrel:trl ;
    		] ;
     bf:language lclang:swe ;
     bf:translationOf </work/alices-adventures-in-wonderland> .
@@ -21,7 +21,14 @@ prefix kbmarc: <http://id.kb.se/marc/>
     bf:title [ a bf:WorkTitle ;
     		bf:mainTitle "Alice's Adventures In Wonderland"
 	  	] ;
+    bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
+    		bf:agent </person/lewis-carroll> ;
+		    bf:role lcrel:aut ;
+   		] ;
     bf:language lclang:eng .
 
 #----
 </person/åke-runnqvist> a bf:Person .
+
+#----
+</person/lewis-carroll> a bf:Person .
