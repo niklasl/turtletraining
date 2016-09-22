@@ -4,6 +4,7 @@ prefix lcrel: <http://id.loc.gov/vocabulary/relators/>
 prefix lclang: <http://id.loc.gov/vocabulary/languages/>
 prefix kbmarc: <http://id.kb.se/marc/>
 
+#----
 </work/alice-i-underlandet> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
     		bf:mainTitle "Alice i underlandet"
@@ -15,10 +16,12 @@ prefix kbmarc: <http://id.kb.se/marc/>
     bf:language lclang:swe ;
     bf:translationOf </work/alices-adventures-in-wonderland> .
 
+#----
 </work/alices-adventures-in-wonderland> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
     		bf:mainTitle "Alice's Adventures In Wonderland"
 	  	] ;
     bf:language lclang:eng .
 
+#----
 </person/åke-runnqvist> a bf:Person .
