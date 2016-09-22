@@ -11,8 +11,6 @@ prefix kbmarc: <http://id.kb.se/marc/>
     		bf:agent </person/åke-runnqvist> ;
 		    bf:role lcrel:trl, lcrel:ill ;
    		] ;
-    #relator:trl </person/åke-runnqvist> ;
-    #relator:ill </person/åke-runnqvist> ;
     bf:translationOf </work/alice-in-wonderland> .
 
 </work/alice-in-wonderland> a bf:Work .
