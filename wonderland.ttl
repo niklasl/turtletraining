@@ -1,10 +1,17 @@
 base <http://bibliotek.se/>
 prefix bf: <http://id.loc.gov/ontologies/bibframe/>
+prefix lcrel: <http://id.loc.gov/vocabulary/relators/>
 
 </work/alice-i-underlandet> a bf:Work ;
     bf:title [ a bf:WorkTitle ;
-    	bf:mainTitle "Alice i underlandet"
-  	] ;
+    		bf:mainTitle "Alice i underlandet"
+	  	] ;
+    bf:contribution [ a bf:Contribution ;
+    		bf:agent </person/åke-runnqvist> ;
+		    bf:role lcrel:trl ;
+   		] ; 
     bf:translationOf </work/alice-in-wonderland> .
 
 </work/alice-in-wonderland> a bf:Work .
+
+</person/åke-runnqvist> a bf:Person .
