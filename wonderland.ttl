@@ -1,4 +1,7 @@
 base <http://bibliotek.se/>
 prefix bf: <http://id.loc.gov/ontologies/bibframe/>
 
-</bok/alice-i-underlandet> a bf:Work .
+</work/alice-i-underlandet> a bf:Work;
+    bf:translationOf </work/alice-in-wonderland> .
+
+</work/alice-in-wonderland> a bf:Work .
