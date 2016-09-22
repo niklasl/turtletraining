@@ -12,7 +12,10 @@ prefix kbmarc: <http://id.kb.se/marc/>
     bf:contribution [ a bf:Contribution ;
     		bf:agent </person/åke-runnqvist> ;
 		    bf:role lcrel:trl ;
-   		] ;
+   		], [ a bf:Contribution ;
+    		bf:agent </person/tove-jansson> ;
+		    bf:role lcrel:ill ;
+   		];
     bf:language lclang:swe ;
     bf:translationOf </work/alices-adventures-in-wonderland> .
 
@@ -29,6 +32,9 @@ prefix kbmarc: <http://id.kb.se/marc/>
 
 #----
 </person/åke-runnqvist> a bf:Person .
+
+#----
+</person/tove-jansson> a bf:Person .
 
 #----
 </person/lewis-carroll> a bf:Person .
