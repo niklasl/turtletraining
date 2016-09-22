@@ -16,17 +16,22 @@ prefix kbmarc: <http://id.kb.se/marc/>
    		], [ a bf:Contribution ;
     		bf:agent </person/åke-runnquist> ;
 		    bf:role lcrel:trl
-   		], [ a bf:Contribution ;
+   		];
+    bf:language lclang:swe ;
+    bf:translationOf </work/alices-adventures-in-wonderland> .
+
+#----
+</work/alice-i-underlandet-illustrerad> a bf:Text ;
+    bf:expressionOf </work/alice-i-underlandet>;
+    bf:contribution [ a bf:Contribution ;
     		bf:agent </person/tove-jansson> ;
 		    bf:role lcrel:ill
    		];
-    bf:language lclang:swe ;
-    bf:translationOf </work/alices-adventures-in-wonderland>;
     bf:hasPart </work/alice-i-underlandet-omslag> .
 
 #----
 </instance/alice-i-underlandet> a bf:Print ;
-    bf:instanceOf </work/alice-i-underlandet> .
+    bf:instanceOf </work/alice-i-underlandet-illustrerad> .
 
 #----
 </work/alice-i-underlandet-omslag> a bf:StillImage ;
