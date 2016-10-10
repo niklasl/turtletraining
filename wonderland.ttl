@@ -1,59 +1,68 @@
 base <http://bibliotek.se/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix bf: <http://id.loc.gov/ontologies/bibframe/>
 prefix lcrel: <http://id.loc.gov/vocabulary/relators/>
 prefix lclang: <http://id.loc.gov/vocabulary/languages/>
+prefix rdaill: <http://rdaregistry.info/termList/IllusContent/>
 prefix kbmarc: <http://id.kb.se/marc/>
+
+
+</work/alices-adventures-in-wonderland> a bf:Text ;
+    bf:title [ a bf:WorkTitle ;
+            bf:mainTitle "Alice's Adventures In Wonderland"
+        ] ;
+    bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
+            bf:agent </person/lewis-carroll> ;
+            bf:role lcrel:aut
+        ] ;
+    bf:language lclang:eng ;
+    bf:originDate "1864"^^xsd:gYear .
 
 
 </work/alice-i-underlandet> a bf:Text ;
     bf:title [ a bf:WorkTitle ;
-    		bf:mainTitle "Alice i underlandet" #@sv
-	  	] ;
+            bf:mainTitle "Alice i underlandet"
+        ] ;
     bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
-    		bf:agent </person/lewis-carroll> ;
-		    bf:role lcrel:aut
-   		], [ a bf:Contribution ;
-    		bf:agent </person/åke-runnquist> ;
-		    bf:role lcrel:trl
-   		];
+            bf:agent </person/lewis-carroll> ;
+            bf:role lcrel:aut
+        ], [ a bf:Contribution ;
+            bf:agent </person/åke-runnquist> ;
+            bf:role lcrel:trl
+        ];
     bf:language lclang:swe ;
+    bf:originDate "1966"^^xsd:gYear;
     bf:translationOf </work/alices-adventures-in-wonderland> .
 
 
 </work/alice-i-underlandet-illustrerad> a bf:Text ;
     bf:expressionOf </work/alice-i-underlandet>;
     bf:contribution [ a bf:Contribution ;
-    		bf:agent </person/tove-jansson> ;
-		    bf:role lcrel:ill
-   		];
+            bf:agent </person/tove-jansson> ;
+            bf:role lcrel:ill
+        ];
+    bf:illustrativeContent rdaill:1014;
     bf:hasPart </work/alice-i-underlandet-omslag> .
 
 
 </instance/alice-i-underlandet> a bf:Print ;
+    bf:responsibilityStatement """av Lewis Carroll
+    i översättning av Åke Runnquist
+    med illustrationer av Tove Jansson""" ;
+    bf:copyrightDate "1966"^^xsd:gYear;
     bf:instanceOf </work/alice-i-underlandet-illustrerad> .
 
 
 </work/alice-i-underlandet-omslag> a bf:StillImage ;
     bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
-    		bf:agent </person/tove-jansson> ;
-		    bf:role lcrel:cre
-   		] .
-
-
-</work/alices-adventures-in-wonderland> a bf:Text ;
-    bf:title [ a bf:WorkTitle ;
-    		bf:mainTitle "Alice's Adventures In Wonderland" #@en
-	  	] ;
-    bf:contribution [ a bf:Contribution, kbmarc:MainEntry ;
-    		bf:agent </person/lewis-carroll> ;
-		    bf:role lcrel:aut
-   		] ;
-    bf:language lclang:eng .
+            bf:agent </person/tove-jansson> ;
+            bf:role lcrel:cre
+        ] .
 
 
 </person/åke-runnquist> a bf:Person ;
-	rdfs:label "Åke Runnquist" .
+    rdfs:label "Åke Runnquist" .
 
 
 </person/tove-jansson> a bf:Person ;
